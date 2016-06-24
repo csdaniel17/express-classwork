@@ -45,5 +45,5 @@ app.listen(3000, function() {
 app.get('/blocks', function(req, res) {
   var blocks = ['fixed', 'movable', 'rotating'];
   // res.send(blocks);
-  res.redirect('/parts');
+  res.redirect(301, '/parts'); 
 });
