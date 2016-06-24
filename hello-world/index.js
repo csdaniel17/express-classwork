@@ -1,7 +1,7 @@
 /*
 long version
 */
-// 
+//
 // var express = require('express');
 // var http = require('http');
 //
@@ -29,10 +29,21 @@ express simplification
 var express = require('express');
 var app = express();
 
-app.get('/', function(req, res) {
-  res.send('Hello World');
-});
+// app.get('/', function(req, res) {
+//   //express api
+//   res.send('Hello World');
+//
+//   //same thing as - node api:
+//   //res.write('Hello World');
+//   //res.end();
+// });
 
 app.listen(3000, function() {
   console.log('app is listening on port 3000');
+});
+
+app.get('/blocks', function(req, res) {
+  var blocks = ['fixed', 'movable', 'rotating'];
+  // res.send(blocks);
+  res.redirect('/parts');
 });
